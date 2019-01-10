@@ -16,6 +16,26 @@
 {{ date("Y-m-d", strtotime('dd/mm/YYYY')) }}
 
 
+
+<!-- Get full date from database and show in new format -->
+<!-- ===  Timestamp Code  ====  -->
+	<?php
+	  function dateTime($date){
+
+	  $timestamp = strtotime($date);
+	  //use a combination of both, eg: 01 June
+	  return   $final_Date = date('M', $timestamp) .' '. date('d', $timestamp).', '.date('Y',$timestamp);
+
+	  }
+	?>
+<!-- ===  Timestamp Code  ====  -->
+
+dateTime($blog->PUBLISH_START_DATE) }}
+
+
+
+
+
 <!-- Get date value and show with some logical calculation -->
 <?php
 	echo(strtotime("now") . "<br>");
